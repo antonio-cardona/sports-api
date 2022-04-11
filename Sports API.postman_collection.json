@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "c764f02b-08d7-4f6c-9c38-f708f4e4ff03",
+		"name": "Sports API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sports",
+			"item": [
+				{
+					"name": "sports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/sports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sportById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Marquita\",\n    \"age\": 33\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/sports/3628a870-623a-4909-8e9b-1301a5f62539",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports",
+								"3628a870-623a-4909-8e9b-1301a5f62539"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createSport",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tennis\",\n    \"players\": 2,\n    \"duration\": 60,\n    \"caloriesBurntByMinuteByAthlete\": 98,\n    \"playedInGroup\": false,\n    \"detail\": \"Field\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/sports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSport",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"caloriesBurntByMinuteByAthlete\": \"191\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/sports/{{sportId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports",
+								"{{sportId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSport",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/sports/{{sportIdToDelete}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports",
+								"{{sportIdToDelete}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity Levels",
+			"item": [
+				{
+					"name": "activityLevels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/sports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activityLevelById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Marquita\",\n    \"age\": 33\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/sports/3628a870-623a-4909-8e9b-1301a5f62539",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"sports",
+								"3628a870-623a-4909-8e9b-1301a5f62539"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Persons",
+			"item": [
+				{
+					"name": "persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/persons/{{personId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons",
+								"{{personId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "canParticipateIn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/persons/canplay/{{personId}}/{{sportId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons",
+								"canplay",
+								"{{personId}}",
+								"{{sportId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tony Rothbard\",\n    \"age\": \"34\",\n    \"weight\": \"105\",\n    \"height\": \"81\",\n    \"activityLevel\": \"590f9a4c-01a7-4f9e-8d9c-8720976b5d1c\",\n    \"sex\": \"M\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePerson",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"weight\": \"143\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/persons/{{personId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons",
+								"{{personId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePerson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/persons/{{personIdToDelete}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"persons",
+								"{{personIdToDelete}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "personId",
+			"value": "d44ad701-2543-43bc-b8a5-48a21ce55f01"
+		},
+		{
+			"key": "personIdToDelete",
+			"value": "43d236ec-e393-4ad0-98a1-7ea081d635fb",
+			"type": "default"
+		},
+		{
+			"key": "sportId",
+			"value": "27189aea-196e-474c-aa17-82bbcf4a31b5",
+			"type": "default"
+		},
+		{
+			"key": "sportIdToDelete",
+			"value": "27189aea-196e-474c-aa17-82bbcf4a31b5",
+			"type": "default"
+		}
+	]
+}
